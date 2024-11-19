@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AP26\\source\\repos\\testrequest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F4D1225C-3233-460F-92D9-96CD746BD308}|testrequest\\testrequest.csproj|c:\\users\\ap26\\source\\repos\\testrequest\\testrequest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4D1225C-3233-460F-92D9-96CD746BD308}|testrequest\\testrequest.csproj|solutionrelative:testrequest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\AP26\\source\\repos\\testrequest\\testrequest\\Program.cs",
+              "RelativeDocumentMoniker": "testrequest\\Program.cs",
+              "ToolTip": "C:\\Users\\AP26\\source\\repos\\testrequest\\testrequest\\Program.cs",
+              "RelativeToolTip": "testrequest\\Program.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAiwGsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T17:54:39.952Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

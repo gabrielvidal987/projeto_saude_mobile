@@ -1,0 +1,17 @@
+C:\Users\AP26\source\repos\testrequest\testrequest\bin\Debug\net8.0\testrequest.exe
+C:\Users\AP26\source\repos\testrequest\testrequest\bin\Debug\net8.0\testrequest.deps.json
+C:\Users\AP26\source\repos\testrequest\testrequest\bin\Debug\net8.0\testrequest.runtimeconfig.json
+C:\Users\AP26\source\repos\testrequest\testrequest\bin\Debug\net8.0\testrequest.dll
+C:\Users\AP26\source\repos\testrequest\testrequest\bin\Debug\net8.0\testrequest.pdb
+C:\Users\AP26\source\repos\testrequest\testrequest\obj\Debug\net8.0\testrequest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AP26\source\repos\testrequest\testrequest\obj\Debug\net8.0\testrequest.AssemblyInfoInputs.cache
+C:\Users\AP26\source\repos\testrequest\testrequest\obj\Debug\net8.0\testrequest.AssemblyInfo.cs
+C:\Users\AP26\source\repos\testrequest\testrequest\obj\Debug\net8.0\testrequest.csproj.CoreCompileInputs.cache
+C:\Users\AP26\source\repos\testrequest\testrequest\obj\Debug\net8.0\testrequest.dll
+C:\Users\AP26\source\repos\testrequest\testrequest\obj\Debug\net8.0\refint\testrequest.dll
+C:\Users\AP26\source\repos\testrequest\testrequest\obj\Debug\net8.0\testrequest.pdb
+C:\Users\AP26\source\repos\testrequest\testrequest\obj\Debug\net8.0\testrequest.genruntimeconfig.cache
+C:\Users\AP26\source\repos\testrequest\testrequest\obj\Debug\net8.0\ref\testrequest.dll
+C:\Users\AP26\source\repos\testrequest\testrequest\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\AP26\source\repos\testrequest\testrequest\obj\Debug\net8.0\testrequest.csproj.AssemblyReference.cache
+C:\Users\AP26\source\repos\testrequest\testrequest\obj\Debug\net8.0\testrequ.CAF7AEE3.Up2Date

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9skYLnSHdAU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AP26\\source\\repos\\testrequest\\testrequest\\testrequest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AP26\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
