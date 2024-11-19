@@ -101,6 +101,7 @@ class Program
         /* o bd_select retornado é um json contendo uma lista de dicionarios. cada dicionario será uma linha 
          do bd. a lista será a pesquisa completa do bd. então cada item da lista é um dicionario. 
          cada dicionario sendo uma linha do retorno do bd */
+        // precisa do await para ele esperar a resposta do get_method
         string bd_select = await Get_method(args);
         List<Dictionary<string, object>> listaDeDicionarios = JsonConvert.DeserializeObject<List<Dictionary<string, object>>>(bd_select);
         foreach (var dict in listaDeDicionarios)

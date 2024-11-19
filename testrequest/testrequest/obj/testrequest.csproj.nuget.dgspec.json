@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AP26\\source\\repos\\testrequest\\testrequest\\testrequest.csproj": {}
+    "C:\\Users\\AP26\\Desktop\\projeto_saude_mobile\\testrequest\\testrequest\\testrequest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AP26\\source\\repos\\testrequest\\testrequest\\testrequest.csproj": {
+    "C:\\Users\\AP26\\Desktop\\projeto_saude_mobile\\testrequest\\testrequest\\testrequest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AP26\\source\\repos\\testrequest\\testrequest\\testrequest.csproj",
+        "projectUniqueName": "C:\\Users\\AP26\\Desktop\\projeto_saude_mobile\\testrequest\\testrequest\\testrequest.csproj",
         "projectName": "testrequest",
-        "projectPath": "C:\\Users\\AP26\\source\\repos\\testrequest\\testrequest\\testrequest.csproj",
+        "projectPath": "C:\\Users\\AP26\\Desktop\\projeto_saude_mobile\\testrequest\\testrequest\\testrequest.csproj",
         "packagesPath": "C:\\Users\\AP26\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AP26\\source\\repos\\testrequest\\testrequest\\obj\\",
+        "outputPath": "C:\\Users\\AP26\\Desktop\\projeto_saude_mobile\\testrequest\\testrequest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
