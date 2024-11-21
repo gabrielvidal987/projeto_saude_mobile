@@ -1,0 +1,17 @@
+-- Este comando cria o schema
+CREATE SCHEMA projeto_saude
+-- Este comando cria a tabela de usuários
+CREATE TABLE usuarios (
+id_sys INT AUTO_INCREMENT PRIMARY KEY, -- na hora que cria um usuario já atribui um id auto incremental
+nome VARCHAR(255) NOT NULL DEFAULT 'usuario_padrao',
+senha VARCHAR(255) NOT NULL DEFAULT 'senha_padrao',
+nivel_acesso VARCHAR(50) NOT NULL DEFAULT 'usuario',
+create_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP); -- na hora que cria um usuario já atribui o horario de criação
+-- Este comando traz todos os usuarios e senha (GET na api)
+SELECT * FROM usuarios;
+-- Este comando insere um usuario no sistema com o nome 'usuario1'. (POST na api)
+INSERT INTO usuarios(nome,senha,nivel_acesso) VALUES ('usuario1','123456','usuario');
+-- Este comando atualiza um campo de um usuario (PUT na api)
+UPDATE usuarios SET senha = '123' WHERE nome = 'usuario1';
+-- Este comando deleta um usuario (DELETE na api)
+DELETE FROM usuarios WHERE id_sys = 1;
