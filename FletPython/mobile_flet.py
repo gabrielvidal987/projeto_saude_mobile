@@ -125,6 +125,8 @@ def dados_connect():
     def acessa(e):
         global usuario,password,ip_request
         if usuario_input.value and senha_input.value:
+            container_connect.padding = 25
+            container_connect.margin = ft.margin.only(left=15,top=15,right=15,bottom=40)
             ip_request = ip_input.value
             container_connect.content.controls.pop()
             container_connect.content.controls.append(ft.ProgressRing())
@@ -137,6 +139,8 @@ def dados_connect():
         page_flet.update()
 
     def area_criar_usuario(e):
+        cadastra_usuario_content.controls[0].value = ''
+        cadastra_usuario_content.controls[1].value = ''
         container_connect.content = cadastra_usuario_content
         page_flet.update()
         
@@ -159,6 +163,8 @@ def dados_connect():
         nivel_acesso = cadastra_usuario_content.controls[2].value
         if request_criar_usuario(nome,senha,nivel_acesso):
             atualiza_tabela_usuarios()
+            alert.title = ft.Text("Usuário cadastrado com sucesso! ")
+            page_flet.open(alert)
             container_connect.content = usuarios_content
             page_flet.update()
         else:
@@ -196,8 +202,8 @@ def dados_connect():
     senha_input = ft.TextField(label="Senha",text_align=ft.TextAlign.CENTER,color="#ffffff",label_style=ft.TextStyle(size=20,color="#7a7b7c"),text_size=20,on_submit=acessa,password=True)
     tabela_usuarios = ft.DataTable(
         columns=[
-            ft.DataColumn(ft.Text("ID")),
             ft.DataColumn(ft.Text("NOME")),
+            ft.DataColumn(ft.Text("ID")),
             ft.DataColumn(ft.Text("ACESSO")),
             ft.DataColumn(ft.Text("ALTERAR SENHA")),
             ft.DataColumn(ft.Text("DELETAR"))
@@ -209,11 +215,17 @@ def dados_connect():
                 controls=[
                     ft.Text("USUARIOS",text_align=ft.TextAlign.CENTER,color=ft.colors.AMBER,size=25),
                     ft.ElevatedButton('CRIAR USUARIO',icon=ft.icons.EXPOSURE_PLUS_1,on_click=area_criar_usuario)            
-                    ]),
-            tabela_usuarios
+                    ],scroll=ft.ScrollMode.ALWAYS),
+            ft.Row(
+                controls=[tabela_usuarios],
+                scroll=ft.ScrollMode.ALWAYS
+            )
         ],
         alignment=ft.MainAxisAlignment.CENTER,
-        horizontal_alignment=ft.CrossAxisAlignment.CENTER 
+        horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+        height=500,
+        width=10,
+        scroll=ft.ScrollMode.ALWAYS,
     )
     
     cadastra_usuario_content = ft.Column(
@@ -271,9 +283,9 @@ def dados_connect():
         bgcolor="#2f2f2f",
         margin=30,
         padding=50,
-        width=900,
+        width=2000,
         border_radius=50,
-        content=login_content
+        content=login_content,
     )
     
     return container_connect
@@ -284,14 +296,11 @@ def main(page: ft.Page) -> None:
     page_flet = page
     page.title="SAÚDE MOBILE"
     page.bgcolor="#212121"
-    page.window_width = 1366
-    page.window_height = 768
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-    
     container_connect = dados_connect()
     page.add(container_connect)  
     
 if __name__ == '__main__':
-    # ft.app(target=main,view=ft.AppView.WEB_BROWSER,port=3000, assets_dir="assets")
-    ft.app(target=main)
+    ft.app(target=main,view=ft.AppView.WEB_BROWSER,port=5000, assets_dir="assets")
+    # ft.app(target=main)
