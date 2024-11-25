@@ -7,11 +7,12 @@ import json
 
 usuario = None
 password = None
+ip_request = None
 page_flet = None
     
 # Realiza um request para resgatar os dados de todos os usuarios
 def request_get_usuarios():
-    url = "http://localhost:3000/api/usuarios"  # Substitua pela URL do seu servidor
+    url = f"http://{ip_request}:3000/api/usuarios"  # Substitua pela URL do seu servidor
     try:
         # Faz a requisição GET para o endpoint
         response = requests.get(url)
@@ -30,7 +31,7 @@ def request_get_usuarios():
     
 # Realiza o request para poder alterar a senha de um usuario
 def request_alterar_senha(id_sys, nome, nova_senha):
-    url = "http://localhost:3000/api/alterarsenha"  # Substitua pela URL do seu servidor
+    url = f"http://{ip_request}:3000/api/alterarsenha"  # Substitua pela URL do seu servidor
     payload = {
         "id_sys": id_sys,
         "nome": nome,
@@ -54,7 +55,7 @@ def request_alterar_senha(id_sys, nome, nova_senha):
   
 # Realiza o request para poder criar um usuário
 def request_criar_usuario(nome, senha, nivel_acesso):
-    url = "http://localhost:3000/api/novousuario"  # Substitua pela URL do seu servidor
+    url = f"http://{ip_request}:3000/api/novousuario"  # Substitua pela URL do seu servidor
     payload = {
         "nome": nome,
         "senha": senha,
@@ -78,7 +79,7 @@ def request_criar_usuario(nome, senha, nivel_acesso):
     
 # Realiza o request para deletar um usuário
 def request_deletar_usuario(id,nome):
-    url = "http://localhost:3000/api/deletarusuario"  # Substitua pela URL do seu servidor
+    url = f"http://{ip_request}:3000/api/deletarusuario"  # Substitua pela URL do seu servidor
     payload = {
         "id_sys": id,
         "nome": nome,
@@ -122,8 +123,9 @@ def dados_connect():
             tabela_usuarios.rows = lista_usuarios
         
     def acessa(e):
-        global usuario,password
+        global usuario,password,ip_request
         if usuario_input.value and senha_input.value:
+            ip_request = ip_input.value
             container_connect.content.controls.pop()
             container_connect.content.controls.append(ft.ProgressRing())
             page_flet.update()
@@ -190,6 +192,7 @@ def dados_connect():
             page_flet.open(alert)
             
     usuario_input = ft.TextField(label="Usuário",text_align=ft.TextAlign.CENTER,color="#ffffff",label_style=ft.TextStyle(size=20,color="#7a7b7c"),text_size=20,on_submit=acessa)
+    ip_input = ft.TextField(label="IP",text_align=ft.TextAlign.CENTER,color="#ffffff",label_style=ft.TextStyle(size=20,color="#7a7b7c"),text_size=20,on_submit=acessa)
     senha_input = ft.TextField(label="Senha",text_align=ft.TextAlign.CENTER,color="#ffffff",label_style=ft.TextStyle(size=20,color="#7a7b7c"),text_size=20,on_submit=acessa,password=True)
     tabela_usuarios = ft.DataTable(
         columns=[
@@ -257,6 +260,7 @@ def dados_connect():
             ft.Text("INSIRA OS DADOS DE LOGIN",text_align=ft.TextAlign.CENTER,color=ft.colors.AMBER,size=25),
             usuario_input,
             senha_input,
+            ip_input,
             ft.ElevatedButton("ACESSAR!",bgcolor=ft.colors.AMBER,color=ft.colors.BLACK,on_click=acessa,width=150,height=50)
         ],
         alignment=ft.MainAxisAlignment.CENTER,
